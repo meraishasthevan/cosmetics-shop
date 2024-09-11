@@ -1,0 +1,177 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.phantom-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #4facfe, #00f2fe); 
+    padding: 20px;
+}
+
+.phantom {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.phantom-card {
+    background: #fff;
+    width: 300px;
+    height: 400px;
+    perspective: 1000px; 
+    margin: 20px;
+    border-radius: 10px;
+    border: 1px solid white;
+}
+
+.phantom-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.phantom-card:hover .phantom-card-inner {
+    transform: rotateY(180deg);
+}
+
+.phantom-card-front, .phantom-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.phantom-card-front {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.phantom-img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.phantom-content {
+    padding: 10px;
+    text-align: center;
+}
+
+.phantom-title {
+    font-size: 1.25rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.phantom-price {
+    font-size: 1.1rem;
+    color: #e63946;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.phantom-card-back {
+    background: linear-gradient(135deg, #4facfe, #00f2fe); 
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: rotateY(180deg);
+}
+
+.phantom-back-content {
+    padding: 20px;
+    text-align: center;
+}
+
+.phantom-back-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.phantom-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; 
+    margin-top: 20px;
+}
+
+.phantom-button, .phantom-add-to-cart {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.phantom-button {
+    background: white;
+    color: black;
+}
+
+.phantom-button:hover {
+    background: black;
+    color: white;
+}
+
+.phantom-add-to-cart {
+    background:white;
+    color: black;
+}
+
+.phantom-add-to-cart:hover {
+    background: black;
+    color: white;}
+
+@media (max-width: 768px) {
+    .phantom {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .phantom-card {
+        width: 80%;
+    }
+}
+
+@media (max-width: 480px) {
+    .phantom-content {
+        padding: 15px;
+    }
+
+    .phantom-title {
+        font-size: 1.1rem;
+    }
+
+    .phantom-price {
+        font-size: 1rem;
+    }
+
+    .phantom-button, .phantom-add-to-cart {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+    }
+}

@@ -1,0 +1,130 @@
+.crystal-container {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  background-color: #f2f2f2;
+}
+
+.crystal {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.crystal-card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 300px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  transform-style: preserve-3d;
+  position: relative;
+  perspective: 1000px;
+}
+
+.crystal-card:hover {
+  transform: rotateY(15deg) rotateX(5deg);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+}
+
+.crystal-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.crystal-card:hover::before {
+  opacity: 1;
+}
+
+.crystal-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.crystal-card:hover .crystal-img {
+  transform: scale(1.1);
+}
+
+.crystal-content {
+  padding: 15px;
+  text-align: center;
+  transform: translateZ(50px);
+}
+
+.crystal-title {
+  font-size: 1.3rem;
+  margin: 10px 0;
+  color: #333;
+}
+
+.crystal-description {
+  font-size: 1rem;
+  color: #777;
+  margin: 5px 0;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.crystal-card:hover .crystal-description {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.crystal-price {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #ff5500;
+  margin: 15px 0;
+}
+
+.crystal-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.crystal-button, .crystal-add-to-cart {
+  background-color: #ff5500;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.crystal-button:hover, .crystal-add-to-cart:hover {
+  background-color: #e64500;
+}
+
+@media (max-width: 768px) {
+  .crystal {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .crystal-card {
+      width: 90%;
+      margin-bottom: 20px;
+  }
+
+  .crystal-img {
+      height: 180px;
+  }
+}

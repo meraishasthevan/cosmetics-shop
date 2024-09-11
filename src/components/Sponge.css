@@ -1,0 +1,108 @@
+.sponge-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background: linear-gradient(to right, rgba(255, 0, 0, 0), rgba(150, 0, 0, 1));
+}
+
+.sponge {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.sponge-card {
+    background: linear-gradient(to right, rgba(255, 0, 0, 0), rgba(150, 0, 0, 1));
+    border: 1px solid black;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 15px;
+    padding: 10px;
+    width: 90%;
+    max-width: 300px;
+    transition: transform 0.3s ease;
+    text-align: center;
+}
+
+.sponge-card:hover {
+    transform: translateY(-5px);
+}
+
+.sponge-img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.sponge-content {
+    padding: 15px 0;
+}
+
+.sponge-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: white;
+}
+
+.sponge-description {
+    font-size: 0.9rem;
+    color: white;
+    margin: 10px 0;
+}
+
+.sponge-price {
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+}
+
+.sponge-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; 
+    margin-top: 20px;
+}
+
+.sponge-button, .sponge-add-to-cart {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.sponge-button {
+    background: linear-gradient(to right, rgba(255, 0, 0, 0), rgba(150, 0, 0, 1));
+    color: white;
+}
+
+.sponge-button:hover {
+    background-color: #e64a19;
+}
+
+.sponge-add-to-cart {
+    background: linear-gradient(to right, rgba(255, 0, 0, 0), rgba(150, 0, 0, 1));
+    color: white;
+}
+
+.sponge-add-to-cart:hover {
+    background: #d84315;
+}
+
+@media (min-width: 768px) {
+    .sponge {
+        flex-direction: row;
+    }
+
+    .sponge-card {
+        width: 45%;
+    }
+}
+
+@media (min-width: 1024px) {
+    .sponge-card {
+        width: 30%;
+    }
+}

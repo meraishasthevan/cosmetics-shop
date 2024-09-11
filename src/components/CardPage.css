@@ -1,0 +1,100 @@
+/* Styling for the main container */
+.cardpage-container {
+    width: 90%;               /* Take up 90% of the page width */
+    margin: auto;             /* Center the container */
+    padding: 20px;
+}
+
+/* Styling for the title */
+.cardpage-container h1 {
+    color: #333;
+    font-size: 2.5rem;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.card-flex-container {
+    display: flex;
+    justify-content: space-between;  
+    flex-wrap: wrap;                 
+}
+
+.cardpage {
+    width: 24%;                   
+    margin-bottom: 20px;            
+    position: relative;
+}
+
+
+.image-container {
+    position: relative;
+    width: 100%;
+    height: 300px;                
+    overflow: hidden;              
+}
+
+.image-container img {
+    width: 100%;                   
+    height: 100%;                 
+    object-fit: cover;             
+}
+
+.image-caption {
+    position: absolute;
+    top: 20px;
+    left: 0;
+    right: 0;
+}
+
+.image-caption span {
+    background: #ec008c;           
+    color: white;
+    padding: 10px 20px;
+    border-radius: 0 20px 20px 0;   
+    font-weight: 600;                
+    letter-spacing: 1px;              
+    font-size: 1rem;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.3); 
+}
+
+
+@media (max-width: 1200px) {
+    .cardpage {
+        width: 30%;                  
+    }
+
+    .cardpage-container h1 {
+        font-size: 2rem;               
+      }
+}
+
+@media (max-width: 768px) {
+    .cardpage {
+        width: 45%;                 
+    }
+
+    .cardpage-container h1 {
+        font-size: 1.5rem;
+    }
+
+    .image-caption span {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+    }
+}
+
+
+@media (max-width: 575px) {
+    .cardpage {
+        width: 100%;                  
+    }
+
+    .cardpage-container h1 {
+        font-size: 1.2rem;
+    }
+
+    .image-caption span {
+        font-size: 0.8rem;
+        padding: 6px 12px;
+    }
+}

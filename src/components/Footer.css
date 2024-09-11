@@ -1,0 +1,125 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .footer-cont {
+    background-color:#282c34; 
+    padding: 20px;
+    color:white;
+    margin-top:30px;
+  }
+  .footer-cont h1{
+    text-align: center;
+    margin:30px;
+  }
+  
+  .footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px; 
+    margin: 0 auto;
+  }
+  
+  .footer-section {
+    flex: 1;
+    min-width: 200px; 
+    padding: 10px;
+  }
+  
+  .footer-section h2 {
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+  }
+  
+  .contact-form input,
+  .contact-form textarea,
+  .newsletter-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .contact-form button,
+  .newsletter-form button {
+    background-color:#ec008c;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .contact-form button:hover,
+  .newsletter-form button:hover {
+    background-color: #ec008c;
+  }
+  
+  .social-icons a {
+    margin: 0 10px;
+    color: #ec008c;
+    text-decoration: none;
+  }
+  
+  .social-icons i {
+    font-size: 1.5rem;
+  }
+  
+  .footer-links {
+    list-style: none;
+  }
+  
+  .footer-links li {
+    margin-bottom: 10px;
+  }
+  
+  .footer-links a {
+    text-decoration: none;
+    color: white;
+  }
+  
+  .footer-links a:hover {
+    text-decoration: underline;
+  }
+  
+  .footer-bottom {
+    margin-top: 20px;
+    font-size: 0.9rem;
+  }
+  
+  @media (max-width: 768px) {
+    .footer-content {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .footer-section {
+      width: 100%;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .social-icons i {
+      font-size: 1.2rem;
+    }
+  
+    .footer-section h2 {
+      font-size: 1.25rem;
+    }
+  }
+  
